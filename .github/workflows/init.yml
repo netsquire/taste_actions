@@ -46,7 +46,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_file: 'lbaas_deployed.log'
-          destination_repo: 'netsquire/taste_action'
+          destination_repo: 'netsquire/taste_actions'
           destination_folder: '.'
           user_email: 'netsquire@gmail.com'
           user_name: 'netsquire'
