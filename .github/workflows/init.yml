@@ -29,6 +29,12 @@ jobs:
       - name: Run a one-line script
         run: pwd
         
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1.3
+        with:
+          directory: .
+          file_name: lbaas-deployed.log
+        
       - uses: "finnp/create-file-action@master"
         env:
           FILE_NAME: "./lbaas_deployed.log"
