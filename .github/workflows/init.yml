@@ -35,9 +35,19 @@ jobs:
         run: |
           echo ------------------------------------
           echo "SHOULD BE CUSTOM SCRIPT HERE!"
-          echo "LBAAS DEPLOYED" >> ../lbaas_deployed.log
-          echo ------------------------------------
-          
-          cat ../lbaas_deployed.log
-          cd ..
-          ls
+          echo "LBAAS DEPLOYED" >> lbaas_deployed.log
+          echo ------------------------------------         
+          cat lbaas_deployed.log
+
+
+      - name: Pushes test file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'lbaas_deployed.log'
+          destination_repo: 'netsquire/taste_action'
+          destination_folder: '.'
+          user_email: 'netsquire@gmail.com'
+          user_name: 'netsquire'
+          commit_message: 'LBAAS to be deployed'
