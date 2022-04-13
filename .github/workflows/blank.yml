@@ -36,5 +36,5 @@ jobs:
           echo test, and deploy your project.
           echo ------------------------------------
           ls
-          /golden_script.sh
+          sh /golden_script.sh
           echo ------------------------------------
