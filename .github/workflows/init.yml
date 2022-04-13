@@ -51,3 +51,17 @@ jobs:
           user_email: 'netsquire@gmail.com'
           user_name: 'netsquire'
           commit_message: 'LBAAS to be deployed'
+
+      - uses: actions/checkout@v1
+      - name: switching from HTTPS to SSH
+        run: git remote set-url origin ${{ secrets.ssh }}
+      - name: check for changes
+        run: git status
+      - name: stage changed files
+        run: git add .
+      - name: commit changed files
+        run: git commit -m "Auto updates.txt"
+      - name: fetch from master
+        run: git fetch origin master
+      - name: push code to master
+        run: git push origin HEAD:master          
