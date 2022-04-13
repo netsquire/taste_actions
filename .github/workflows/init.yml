@@ -41,4 +41,5 @@ jobs:
           echo test, and deploy your project.
           echo ------------------------------------
           echo "SHOULD BE CUSTOM SCRIPT HERE!"
+          echo "LBAAS DEPLOYED" >> ../lbaas_deployed.log
           echo ------------------------------------
