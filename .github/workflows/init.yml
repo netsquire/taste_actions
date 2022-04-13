@@ -40,17 +40,17 @@ jobs:
           cat lbaas_deployed.log
 
 
-      - name: Pushes test file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'lbaas_deployed.log'
-          destination_repo: 'netsquire/taste_actions'
-          destination_folder: '.'
-          user_email: 'netsquire@gmail.com'
-          user_name: 'netsquire'
-          commit_message: 'LBAAS to be deployed'
+#       - name: Pushes test file
+#         uses: dmnemec/copy_file_to_another_repo_action@main
+#         env:
+#           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#         with:
+#           source_file: 'lbaas_deployed.log'
+#           destination_repo: 'netsquire/taste_actions'
+#           destination_folder: '.'
+#           user_email: 'netsquire@gmail.com'
+#           user_name: 'netsquire'
+#           commit_message: 'LBAAS to be deployed'
 
       - uses: actions/checkout@v1
 #       - name: switching from HTTPS to SSH
@@ -60,6 +60,5 @@ jobs:
              git config --global user.email "netsquire@gmail.com"
              git config --global user.name "Valery Sorokin"
              git add .
-             git commit -m "Auto updates.txt"
-             git fetch origin master
-             git push origin HEAD:master          
+             git commit -m "Auto deployment"
+             git push origin HEAD:master      
