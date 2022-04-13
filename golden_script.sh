@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo "Github actions working"
+echo "LBAAS deployment workflow"
+
+touch lbaas_deployed.state
