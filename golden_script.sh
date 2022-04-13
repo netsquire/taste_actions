@@ -2,4 +2,4 @@
 
 echo "LBAAS deployment workflow"
 
-touch lbaas_deployed.state
+touch /tmp/lbaas_deployed.state
