@@ -35,9 +35,9 @@ jobs:
         run: |
           echo ------------------------------------
           echo "SHOULD BE CUSTOM SCRIPT HERE!"
-          echo "LBAAS DEPLOYED" >> lbaas_deployed.log
+          echo "LBAAS DEPLOYED" >> ../lbaas_deployed.log
           echo ------------------------------------
           
-          cat lbaas_deployed.log
-          pwd
+          cat ../lbaas_deployed.log
+          cd ..
           ls
