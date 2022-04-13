@@ -32,6 +32,7 @@ jobs:
           git config --global user.email "netsquire@gmail.com"
           git config --global user.name "Valery Sorokin"
           cp lbaas_deployed.log lbaas_deployed.to_update
+          git pull
           git add lbaas_deployed.to_update
           git commit -m "Auto deployment"
-          git push origin HEAD:master      
+          git push origin HEAD:main
