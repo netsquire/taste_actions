@@ -31,4 +31,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Deploying LBAAS
-          ../golden_script.sh
+#         ../golden_script.sh
