@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.version }}"
+      run: echo "Hello ${{ github.event.inputs.version }} in colo ${{ github.evenr.inputs.colo }}"
