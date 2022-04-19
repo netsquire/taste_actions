@@ -1,4 +1,4 @@
-# This is a basic workflow that is manually triggered
+# Double valued workflow that is manually triggered
 
 name: Manual workflow
 
@@ -9,6 +9,10 @@ on:
         description: 'LBAAS version to update'
         default: 'LBAAS <version>'
         required: true
+      colo:
+        description: Medallia Colocation Center
+        default: Denver
+        required: true      
 
 jobs:
   greet:
